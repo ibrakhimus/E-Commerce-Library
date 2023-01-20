@@ -5,7 +5,8 @@ function renderBooks(filter) {
 
   console.log(filter);
   if (filter === "LOW_TO_HIGH") {
-    
+    const filteredBooks = books.sort((a, b) => a.originalPrice - b.originalPrice);
+    console.log(filteredBooks);
   }
 
 
@@ -43,7 +44,7 @@ setTimeout(() => {
   renderBooks();
 });
 
-// FAKE DATAa
+// FAKE DATA
 function getBooks() {
   return [
     {
